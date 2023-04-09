@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -20,10 +20,11 @@
             android:textSize="16.9sp"
             android:padding="10dp"/>
         <TextView
+            android:id="@+id/time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#669D93"
-            android:text="14.58"
+            android:text="15:49"
             android:textSize="10sp"
             android:paddingStart="10dp"
             tools:ignore="RtlSymmetry,SmallSp"/>

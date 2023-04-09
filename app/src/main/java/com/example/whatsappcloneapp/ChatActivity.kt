@@ -5,11 +5,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+import org.w3c.dom.Text
+import java.util.*
+import kotlin.collections.ArrayList
 
 class ChatActivity : AppCompatActivity() {
     private lateinit var recycler: RecyclerView
@@ -19,12 +23,14 @@ class ChatActivity : AppCompatActivity() {
     private lateinit var sendMessage: ImageView
     private lateinit var dbRef: DatabaseReference
 
+
     var receiveRoom: String? = null
     var sentRoom: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chat)
+
 
         recycler = findViewById(R.id.chatRecycler)
         messageList = ArrayList()
@@ -43,6 +49,11 @@ class ChatActivity : AppCompatActivity() {
         supportActionBar?.title = name
         recycler.layoutManager = LinearLayoutManager(this@ChatActivity)
         recycler.adapter = adapter
+
+
+
+
+
 
         dbRef.child("chats").child(sentRoom!!).child("messages")
             .addValueEventListener(object: ValueEventListener{
