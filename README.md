@@ -3,7 +3,7 @@
 ![Untitled](https://user-images.githubusercontent.com/106450848/230793023-22c167a5-504e-4aeb-b61e-d39160034229.png)
 
 ![visitor badge](https://visitor-badge.glitch.me/badge?page_id=Ulasceri.visitor-badge&left_color=red&right_color=green) 
-# Basic Chatleşme uygulaması ; 
+## Basic Chatleşme uygulaması ; 
 ## Proje Özellikleri
 - MVVM Architecture
 - View Binding
